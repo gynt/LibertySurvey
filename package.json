@@ -1,0 +1,23 @@
+{
+  "name": "libertysurvey",
+  "version": "0.0.1",
+  "description": "Survey system in JavaScript",
+  "main": "survey.js",
+  "scripts": {
+    "test": "node survey"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gynt/libertysurvey.git"
+  },
+  "author": "gynt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gynt/libertysurvey/issues"
+  },
+  "homepage": "https://github.com/gynt/libertysurvey#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2"
+  }
+}
