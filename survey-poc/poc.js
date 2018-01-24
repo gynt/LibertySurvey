@@ -2,9 +2,10 @@ var engine = require("./survey-engine")
 
 var survey = new engine.Survey();
 
-survey.addPage(
+survey.appendElements(
 	engine.createText({
 		text:"<h1>Welcome to this survey!</h1>",
+		format:"html",
 	}),
 	engine.createSeparator({
 		height:10,
@@ -16,7 +17,7 @@ survey.addPage(
 		text:"How much do you like libertysurvey so far?",
 		reminded: true,
 		required: false,
-		template:"templates/likert/basic",
+		template:"likert/basic",
 	}),
 	engine.createLikertScale({
 		points:7,
@@ -26,5 +27,7 @@ survey.addPage(
 	}),
 );
 
-console.log(survey.getPages());
-console.log(engine.render(survey));
+survey.appendSections({},{});
+
+
+module.exports = survey;

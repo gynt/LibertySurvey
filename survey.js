@@ -102,7 +102,12 @@ app.post('/api/token', function(req, res) {
 // let static middleware do its job
 app.use(express.static(__dirname + '/public'));
 console.log('Serving public content on: ' + __dirname + '/public');
- 
+
+
+var survey = require("./survey-poc/poc.js");
+console.log(survey.sections[0].elements[3]);
+console.log(survey.sections);
+
 // start the server
 app.listen(port);
 console.log('Server started! At http://localhost:' + port);
