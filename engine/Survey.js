@@ -33,4 +33,13 @@ Survey.prototype.nameElement = function({variable=undefined} = {}) {
     return Object.assign(arguments[0], {variable:variable});
 }
 
+Survey.prototype.nameSection = function({name=undefined} = {}) {
+    if(name === undefined) {
+        name = this.sectionnamer.nextVariableName();
+    } else {
+        this.sectionnamer.registerName(name);
+    }
+    return Object.assign(arguments[0], {name:name});
+}
+
 module.exports = Survey;

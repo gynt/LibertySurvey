@@ -18,6 +18,7 @@ survey.appendElements(
 		reminded: true,
 		required: false,
 		template:"likert/basic",
+		display:true,
 	})),
 	survey.nameElement(engine.createLikertScale({
 		points:7,
